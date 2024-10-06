@@ -15,15 +15,15 @@ const Hero: React.FC = () => {
             id='badge'
             className='inline-flex items-center rounded-lg border-2 max-w-full md:w-fit border-gray-400/40 px-2 py-1 mb-4 '
           >
-            <span className='border-2 flex items-center p-1 px-2 rounded-md w-fit '>
-              <span className='flex items-center relative '>
-                <span className='w-3 h-3 bg-pink-300 animate-ping rounded-full absolute -z-5'></span>
-                <span className='w-2 h-2 bg-red-500 rounded-full z-20'></span>
+            <div className='flex items-center border-2 border-gray-400/40 px-2 py-1 rounded-md'>
+              <span className='relative inline-flex items-center justify-center w-3 h-3'>
+                <span className='absolute w-full h-full bg-pink-300 animate-ping rounded-full opacity-75'></span>
+                <span className='relative w-2 h-2 bg-red-500 rounded-full'></span>
               </span>
               <div className='text-xs font-medium text-nowrap ml-3'>
                 <p>What's new?</p>
               </div>
-            </span>
+            </div>
             <a href='#' className='text-xs text-gray-600 ml-2 truncate'>
               Lorem ipsum dolor sit amet
             </a>
