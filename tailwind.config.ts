@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import headlessui from '@headlessui/tailwindcss';
 
 export default {
   content: [
@@ -11,11 +12,11 @@ export default {
     extend: {
       colors: {
         'accent-ui': '#FDB022',
-        'text-ui': '#4E1D09',
+        'accent-dark-ui': '#4E1D09',
         'text-main': '#344054',
-        'text-hero': 'linear-gradient(to right, #DC6803, #FDB022)',
-        'nav-idle': '#EC4A0A',
-        'nav-active': '#FDB022',
+        'hero-linear': 'linear-gradient(to right, #DC6803, #FDB022)',
+        'nav-active': '#EC4A0A',
+        'nav-idle': '#FDB022',
         'text-heading': '#101828',
       },
       backgroundImage: {
@@ -27,5 +28,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [headlessui],
 } satisfies Config;
