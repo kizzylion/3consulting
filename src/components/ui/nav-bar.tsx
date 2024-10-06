@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import Logo from '@assets/logo.png';
+import Logo from '@assets/Logo.png';
 import { useState } from 'react';
 import Button from './button';
 
