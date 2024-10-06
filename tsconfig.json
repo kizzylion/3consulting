@@ -26,12 +26,13 @@
     //configure base path
     "baseUrl": "./",
     "paths": {
-      "@route/*": ["src/*"],
+      "@route/*": ["src/routes/*"],
       "@layout/*": ["src/layout/*"],
       "@components/*": ["src/components/*"],
       "@hook/*": ["src/hook/*"],
       "@store/*": ["src/store/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
 
