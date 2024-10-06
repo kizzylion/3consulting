@@ -3,9 +3,11 @@ import NavBar from '@components/ui/nav-bar';
 
 function View() {
   return (
-    <div className='min-h-screen bg-white max-w-7xl mx-auto'>
-      <NavBar />
-      <main>
+    <div className='min-h-screen mx-auto'>
+      <div className=''>
+        <NavBar />
+      </div>
+      <main className=''>
         <Outlet />
       </main>
     </div>
