@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Added for TanStack Router */
+    "strictNullChecks": true,
+
+    //configure base path
+    "baseUrl": "./",
+    "paths": {
+      "@route/*": ["src/routes/*"],
+      "@layout/*": ["src/layout/*"],
+      "@components/*": ["src/components/*"],
+      "@hook/*": ["src/hook/*"],
+      "@store/*": ["src/store/*"],
+      "@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  },
+
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
