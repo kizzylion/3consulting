@@ -21,8 +21,13 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Added for TanStack Router */
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": "./",
+    "paths": {
+      "~*": ["src/*"]
+    }
   },
+
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
