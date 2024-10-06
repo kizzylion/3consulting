@@ -3,7 +3,7 @@ import heroImage from '@assets/home-hero.png';
 import OnBaseLogo from '@assets/partners/onbase.png';
 import PECBLogo from '@assets/partners/pecb.png';
 import DatprofLogo from '@assets/partners/Dataprof.png';
-import NorteiLogo from '@assets/partners/norteN.png';
+import NorteiLogo from '@assets/partners/norten.png';
 import Button from '@components/ui/button';
 
 const Hero: React.FC = () => {
