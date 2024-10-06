@@ -7,7 +7,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <nav className='py-4  relative shadow-sm w-full border-2  bg-white '>
+      <nav className='py-4  relative w-full border-b-2 border-gray-300 bg-white '>
         <section className='max-w-7xl flex justify-between items-center px-4 md:px-8 lg:px-20 mx-auto'>
           <div className='flex items-center gap-x-4 '>
             <img src={Logo} alt='logo' />
