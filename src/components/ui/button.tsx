@@ -1,42 +1,42 @@
-import { Link } from '@tanstack/react-router';
-import { cn } from '@utils/index';
-import React from 'react';
+import { Link } from "@tanstack/react-router";
+import { cn } from "@utils/index";
+import React from "react";
 
 type ButtonProps = {
   children: React.ReactNode;
   className?: string;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: "primary" | "secondary" | "outline";
   onClick?: () => void;
   activeOptions?: {
     exact?: boolean;
   };
 } & (
-  | { as: 'link'; to: string; className?: string }
+  | { as: "link"; to: string; className?: string }
   | {
-      as?: 'button';
-      type?: 'button' | 'submit' | 'reset';
+      as?: "button";
+      type?: "button" | "submit" | "reset";
     }
 );
 
 function Button({
   children,
   className,
-  variant = 'primary',
+  variant = "primary",
   activeOptions,
   onClick,
   ...props
 }: ButtonProps) {
-  const baseStyles = 'font-semibold rounded-lg transition duration-300 ';
+  const baseStyles = "font-semibold rounded-lg transition duration-300 ";
   const variantStyles = {
-    primary: `${props.as === 'button' ? 'bg-accent-ui text-accent-dark-ui' : 'text-accent-ui'} hover:bg-yellow-600`,
-    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
+    primary: `${props.as === "button" ? "bg-accent-ui text-amber-500" : "text-accent-ui"} hover:text-amber-600`,
+    secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
     outline:
-      'bg-transparent border border-accent-ui text-accent-ui hover:bg-accent-ui hover:text-accent-dark-ui',
+      "bg-transparent border border-accent-ui text-accent-ui hover:bg-accent-ui hover:text-accent-dark-ui",
   };
 
   const combinedClassName = cn(baseStyles, variantStyles[variant], className);
 
-  if (props.as === 'link') {
+  if (props.as === "link") {
     return (
       <Link
         onClick={onClick}
@@ -44,9 +44,9 @@ function Button({
         {...props}
         className={combinedClassName}
         activeProps={{
-          className: 'text-nav-active font-bold',
+          className: "text-nav-active font-bold",
         }}
-        preload='intent'
+        preload="intent"
       >
         {children}
       </Link>
@@ -56,9 +56,13 @@ function Button({
   return (
     <button
       onClick={onClick}
-      className={cn('py-4 px-8 text-lg', combinedClassName, className)}
+      className={cn(
+        "py-4 px-8 text-lg font-medium",
+        combinedClassName,
+        className
+      )}
       {...props}
-      type={props.type || 'button'}
+      type={props.type || "button"}
     >
       {children}
     </button>
