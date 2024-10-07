@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
               />
             </svg>
           </div>
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6 py-2 leading-tight bg-gradient-to-r from-accent-dark-ui to-accent-ui bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-4xl lg:text-6xl font-bold mb-6 py-2 leading-tight bg-gradient-to-r from-accent-dark-ui to-accent-ui bg-clip-text text-transparent">
             Shield Your Business from Cyber Threats
           </h1>
           <p className="text-lg text-gray-600 mb-8">
