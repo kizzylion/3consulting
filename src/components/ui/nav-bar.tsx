@@ -1,57 +1,57 @@
-import { Link } from '@tanstack/react-router';
-import Logo from '@assets/Logo.png';
-import { useState } from 'react';
-import Button from './button';
+import { Link } from "@tanstack/react-router";
+import Logo from "@assets/Logo.png";
+import { useState } from "react";
+import Button from "./button";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <nav className='py-4  relative w-full border-b-2 border-gray-300 bg-white '>
-        <section className='max-w-7xl flex justify-between items-center px-4 md:px-8 lg:px-20 mx-auto'>
-          <div className='flex items-center gap-x-4 '>
-            <img src={Logo} alt='logo' />
-            <ul className='hidden md:flex space-x-4'>
+    <div id="Nav-section">
+      <nav className="py-4  z-20 fixed w-full border-b border-gray-300 bg-white ">
+        <section className="max-w-7xl flex justify-between items-center px-4 md:px-8 lg:px-20 mx-auto">
+          <div className="flex items-center gap-x-4 ">
+            <img src={Logo} alt="logo" />
+            <ul className="hidden md:flex space-x-4 ml-20">
               <li>
-                <Button to='/' as='link'>
+                <Button to="/" as="link">
                   Home
                 </Button>
               </li>
               <li>
-                <Button to='/about-us' as='link'>
+                <Button to="/about-us" as="link">
                   About Us
                 </Button>
               </li>
               <li>
-                <Button to='/solutions' as='link'>
+                <Button to="/solutions" as="link">
                   Solutions
                 </Button>
               </li>
               <li>
-                <Button to='/resources' as='link'>
+                <Button to="/resources" as="link">
                   Resources
                 </Button>
               </li>
             </ul>
           </div>
-          <div className='hidden md:block  bg-accent-ui px-8 py-2 rounded-lg font-semibold'>
-            <Link to='/contact' className='text-accent-dark-ui text-sm'>
+          <div className="hidden md:block  bg-accent-ui px-8 py-2 rounded-lg font-semibold">
+            <Link to="/contact" className="text-accent-dark-ui text-sm">
               Contact Us
             </Link>
           </div>
-          <button className='md:hidden' onClick={() => setIsOpen(true)}>
+          <button className="md:hidden" onClick={() => setIsOpen(true)}>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke='currentColor'
-              className='size-6'
+              stroke="currentColor"
+              className="size-6"
             >
               <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M3.75 9h16.5m-16.5 6.75h16.5'
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 9h16.5m-16.5 6.75h16.5"
               />
             </svg>
           </button>
@@ -72,52 +72,52 @@ const SmallNav = ({
   if (!isOpen) return null;
 
   return (
-    <div className='fixed inset-0 bg-black/60 z-50 flex flex-col  justify-start'>
+    <div className="fixed inset-0 bg-black/60 z-50 flex flex-col  justify-start">
       <button
-        className='absolute top-4 right-4 bg-white/80 backdrop-blur-3xl shadow-md p-2 rounded-full'
+        className="absolute top-4 right-4 bg-white/80 backdrop-blur-3xl shadow-md p-2 rounded-full"
         onClick={onClose}
       >
         <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke='currentColor'
-          className='size-4 text-black'
+          stroke="currentColor"
+          className="size-4 text-black"
         >
           <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M6 18 18 6M6 6l12 12'
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18 18 6M6 6l12 12"
           />
         </svg>
       </button>
-      <ul className='flex flex-col items-center space-y-4 text-left pt-6 bg-white w-3/4 p-4 rounded-se-lg  h-full'>
-        <li className=' w-full'>
-          <img src={Logo} alt='logo' />
+      <ul className="flex flex-col items-center space-y-4 text-left pt-6 bg-white w-3/4 p-4 rounded-se-lg  h-full">
+        <li className=" w-full">
+          <img src={Logo} alt="logo" />
         </li>
-        <li className=' w-full'>
+        <li className=" w-full">
           <Button
-            as='link'
-            to='/'
+            as="link"
+            to="/"
             activeOptions={{ exact: true }}
             onClick={onClose}
           >
             Home
           </Button>
         </li>
-        <li className=' w-full'>
-          <Button as='link' to='/about-us' onClick={onClose}>
+        <li className=" w-full">
+          <Button as="link" to="/about-us" onClick={onClose}>
             About Us
           </Button>
         </li>
-        <li className=' w-full'>
-          <Button as='link' to='/solutions' onClick={onClose}>
+        <li className=" w-full">
+          <Button as="link" to="/solutions" onClick={onClose}>
             Solutions
           </Button>
         </li>
-        <li className=' w-full'>
-          <Button as='link' to='/resources' onClick={onClose}>
+        <li className=" w-full">
+          <Button as="link" to="/resources" onClick={onClose}>
             Resources
           </Button>
         </li>
