@@ -1,13 +1,13 @@
-import { Outlet } from '@tanstack/react-router';
-import NavBar from '@components/ui/nav-bar';
+import { Outlet } from "@tanstack/react-router";
+import NavBar from "@components/ui/nav-bar";
 
 function View() {
   return (
-    <div className='min-h-screen mx-auto'>
-      <div className=''>
+    <div className="h-full mx-auto">
+      <div className="z-20 fixed w-full h-fit border-b border-gray-300">
         <NavBar />
       </div>
-      <main className=''>
+      <main className="h-full w-full">
         <Outlet />
       </main>
     </div>

@@ -6,9 +6,12 @@ import Button from "./button";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div id="Nav-section">
-      <nav className="py-4  z-20 fixed w-full border-b border-gray-300 bg-white ">
-        <section className="max-w-7xl flex justify-between items-center px-4 md:px-8 lg:px-20 mx-auto">
+    <div
+      id="Nav-section"
+      className="max-w-7xl mx-auto w-full px-5 md:px-8 h-fit sticky top-0 z-50"
+    >
+      <nav className="py-4 w-full  bg-white ">
+        <section className=" flex justify-between items-center mx-auto">
           <div className="flex items-center gap-x-4 ">
             <img src={Logo} alt="logo" />
             <ul className="hidden md:flex space-x-4 ml-20">
