@@ -68,7 +68,7 @@ const Features: React.FC = () => {
                 Learn more <i className="bi bi-arrow-right"></i>{" "}
               </a>
             </div>
-            <div className="image-section lg:mt-0 aspect-video lg:aspect-square lg:size-full  border-2  border-red-400">
+            <div className="image-section lg:mt-0 aspect-video lg:aspect-square lg:size-full ">
               <img
                 src={featImg1}
                 alt=""
