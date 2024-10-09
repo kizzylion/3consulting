@@ -9,7 +9,10 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <div className="mx-auto relative">
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+      <div
+        id="Background"
+        className="absolute inset-0 w-full h-full z-0 overflow-hidden"
+      >
         <svg
           className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-auto max-w-full max-h-screen"
           viewBox="0 0 1440 810"
