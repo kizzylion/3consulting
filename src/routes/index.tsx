@@ -4,17 +4,18 @@ import Features from '@components/pages/home/features-section';
 import Carousel from '@components/pages/home/Carousel';
 import Testimonial from '@components/pages/home/testimonial';
 import FactsAndQuestion from '@components/pages/home/frequently-asked-questions';
-
+import Metrics from '@components/pages/home/metrics';
+import HomeNewsletter from '@components/pages/home/NewsLetter';
 export const Route = createFileRoute('/')({
   component: Home,
 });
 
 function Home() {
   return (
-    <div className="mx-auto relative">
+    <div className='mx-auto relative'>
       <div
-        id="Background"
-        className="absolute inset-0 w-full h-full z-0 overflow-hidden"
+        id='Background'
+        className='absolute inset-0 w-full h-full z-0 overflow-hidden'
       >
         <svg
           className='absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-auto max-w-full max-h-screen'
@@ -275,8 +276,10 @@ function Home() {
         <Hero />
         <Features />
         <Carousel />
+        <Metrics />
         <Testimonial />
         <FactsAndQuestion />
+        <HomeNewsletter />
       </section>
     </div>
   );
