@@ -11,7 +11,7 @@ function Home() {
     <div className="mx-auto relative">
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <svg
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-auto min-w-full min-h-screen"
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-auto max-w-full max-h-screen"
           viewBox="0 0 1440 810"
           preserveAspectRatio="xMidYMin slice"
           fill="none"
