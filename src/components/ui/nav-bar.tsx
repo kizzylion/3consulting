@@ -124,22 +124,38 @@ const SmallNav = ({
             to='/'
             activeOptions={{ exact: true }}
             onClick={onClose}
+            className='text-gray-600 hover:text-amber-500 bg-transparent shadow-none'
           >
             Home
           </Button>
         </li>
         <li className=' w-full'>
-          <Button as='link' to='/about-us' onClick={onClose}>
+          <Button
+            as='link'
+            to='/about-us'
+            onClick={onClose}
+            className='text-gray-600 hover:text-amber-500 bg-transparent shadow-none'
+          >
             About Us
           </Button>
         </li>
         <li className=' w-full'>
-          <Button as='link' to='/solutions' onClick={onClose}>
+          <Button
+            as='link'
+            to='/solutions'
+            onClick={onClose}
+            className='text-gray-600 hover:text-amber-500 bg-transparent shadow-none'
+          >
             Solutions
           </Button>
         </li>
         <li className=' w-full'>
-          <Button as='link' to='/resources' onClick={onClose}>
+          <Button
+            as='link'
+            to='/resources'
+            onClick={onClose}
+            className='text-gray-600 hover:text-amber-500 bg-transparent shadow-none'
+          >
             Resources
           </Button>
         </li>
