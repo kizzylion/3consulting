@@ -3,7 +3,7 @@ import Hero from '@components/pages/home/Hero';
 import Features from '@components/pages/home/features-section';
 import Carousel from '@components/pages/home/Carousel';
 import Testimonial from '@components/pages/home/testimonial';
-import FactsAndQuestion from '@components/pages/home/facts-and-question';
+import FactsAndQuestion from '@components/pages/home/frequently-asked-questions';
 
 export const Route = createFileRoute('/')({
   component: Home,
