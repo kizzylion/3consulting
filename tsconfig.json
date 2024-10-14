@@ -29,7 +29,8 @@
       "@route/*": ["src/routes/*"],
       "@layout/*": ["src/layout/*"],
       "@components/*": ["src/components/*"],
-      "@hook/*": ["src/hook/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@pages/*": ["src/components/pages/*"],
       "@store/*": ["src/store/*"],
       "@assets/*": ["src/assets/*"],
       "@utils/*": ["src/utils/*"]
