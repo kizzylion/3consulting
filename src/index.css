@@ -13,3 +13,7 @@ body {
 button:focus {
   outline: none;
 }
+
+.debug{
+  @apply border-2 border-red-500 
+}
