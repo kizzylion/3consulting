@@ -1,13 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
-import AboutHeading from "@components/pages/about/heading";
-import PartnersSection from "@components/pages/about/partners";
-import MetricSection from "@components/pages/about/metric";
-import OurStorySection from "@components/pages/about/ourstory";
-import OurValueSection from "@components/pages/about/ourvalues";
-import OurTeamSection from "@components/pages/about/ourteam";
-import AboutNewsletter from "@components/pages/about/newsletter";
+import { createFileRoute } from '@tanstack/react-router';
+import AboutHeading from '@pages/about/heading';
+import PartnersSection from '@pages/about/partners';
+import MetricSection from '@pages/about/metric';
+import OurStorySection from '@pages/about/ourstory';
+import OurValueSection from '@pages/about/ourvalues';
+import OurTeamSection from '@pages/about/ourteam';
+import AboutNewsletter from '@pages/about/newsletter';
 
-export const Route = createFileRoute("/about-us")({
+export const Route = createFileRoute('/about-us')({
   component: AboutUs,
 });
 

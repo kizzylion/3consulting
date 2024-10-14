@@ -1,11 +1,11 @@
 const HomeNewsletter: React.FC = () => {
   return (
-    <section id='newsletter' className='w-full pb-16 md:pb-24'>
-      <div className='max-w-7xl mx-auto w-full px-5 md:px-8'>
-        <div className='container-none bg-gray-50 rounded-xl md:rounded-3xl px-5 py-10 lg:p-16'>
-          <div className='section-heading w-full '>
-            <div className='heading-subheading max-w-3xl mx-auto text-center w-full mb-8'>
-              <h5 className='text-3xl lg:text-4xl text-gray-900 font-semibold mb-5 w-fit mx-auto'>
+    <section id='newsletter' className='py-16 w-full bg-gray-50 md:py-24'>
+      <div className='px-5 mx-auto w-full max-w-7xl md:px-8'>
+        <div className=''>
+          <div className='w-full section-heading'>
+            <div className='mx-auto mb-8 w-full max-w-3xl text-center heading-subheading'>
+              <h5 className='mx-auto mb-5 text-3xl font-semibold text-gray-900 lg:text-4xl'>
                 Join our newsletter
               </h5>
               <p className='text-base text-gray-700 md:text-lg'>
@@ -15,23 +15,23 @@ const HomeNewsletter: React.FC = () => {
             </div>
             <form
               action='#'
-              className='max-w-md mx-auto lg:flex items-start gap-4'
+              className='flex flex-col gap-4 items-center mx-auto max-w-md'
             >
-              <div className='flex flex-col gap-4 w-full'>
+              <div className='flex flex-col gap-4 w-full md:flex-row'>
                 <input
                   type='email'
                   placeholder='Enter your email'
-                  className='
-                    px-[0.875rem] py-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 w-full
-                  '
+                  className='px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500'
                 />
-                <p className='text-sm text-gray-600'>
-                  We care about your privacy policy.
-                </p>
+
+                <button className='px-6 py-3 w-full font-medium text-gray-900 bg-amber-400 rounded-lg shadow-md cursor-pointer hover:bg-amber-500 focus:ring-2 focus:ring-offset-2 active:bg-amber-600 active:scale-95 focus:ring-amber-500 lg:w-auto'>
+                  Subscribe
+                </button>
               </div>
-              <button className='mt-8 md:mt-0 bg-amber-400 hover:bg-amber-500 shadow-md  focus:ring-2 focus:ring-offset-2 active:bg-amber-600 active:scale-95 focus:ring-amber-500 text-gray-900 rounded-lg font-medium px-4 py-3 min-w-50 w-full lg:w-fit cursor-pointer'>
-                Subscribe
-              </button>
+              <p className='text-sm text-center text-gray-600 lg:text-left'>
+                We care about your privacy policy.
+              </p>
+
             </form>
           </div>
         </div>
