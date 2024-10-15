@@ -8,14 +8,9 @@ const Hero: React.FC = () => {
   return (
     <section
       id="data-protection-hero"
-      className={`relative bg-gray-700  px-4 py-12 mx-auto bg-cover bg-center md:px-8 lg:px-20 md:py-16 lg:py-24`}
+      className={`relative bg-gray-700 isolate   mx-auto bg-cover bg-center  md:py-16 lg:py-24`}
     >
-      <div
-        id="Background"
-        className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: `url(${map})` }}
-      ></div>
-      <div className="grid grid-cols-1 gap-8 z-20  justify-between items-center pt-10 w-full md:grid md:grid-cols-2 md:pt-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 z-20  justify-between items-center pt-10 w-full px-4 py-12 md:px-8 md:grid md:grid-cols-2 md:pt-16">
         <div className="mb-6 lg:mb-0">
           <div
             id="badge"
@@ -62,7 +57,7 @@ const Hero: React.FC = () => {
             Book a Free Consultation
           </Button>
         </div>
-        <div className="flex justify-center items-center mt-8 h-full lg:mt-0">
+        <div className="flex justify-center items-center mt-8 h-full lg:mt-0 ">
           <img
             src={heroImage}
             draggable="false"
@@ -71,6 +66,11 @@ const Hero: React.FC = () => {
           />
         </div>
       </div>
+      <div
+        id="Background"
+        className="absolute -z-10 inset-0 bg-cover bg-center opacity-40"
+        style={{ backgroundImage: `url(${map})` }}
+      ></div>
     </section>
   );
 };

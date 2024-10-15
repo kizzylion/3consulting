@@ -13,7 +13,7 @@ export const Route = createFileRoute("/solutions/data-protection")({
 
 function DataProtection() {
   return (
-    <div id="solutions" className="relative mx-auto">
+    <div id="solutions" className="">
       <div className="relative z-10">
         <Hero />
         <Overview />
