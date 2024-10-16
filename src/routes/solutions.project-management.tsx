@@ -1,9 +1,25 @@
 import { createFileRoute } from '@tanstack/react-router';
+import Hero from '@components/pages/solutions/project-management/hero';
+import Overview from '@components/pages/solutions/project-management/overview';
+import Features from '@components/pages/solutions/project-management/features';
+import Contactus from '@components/pages/solutions/project-management/contactus';
+import Newsletter from '@components/pages/solutions/project-management/newsletter';
 
 export const Route = createFileRoute('/solutions/project-management')({
   component: ProjectManagement,
 });
 
 function ProjectManagement() {
-  return <div className='p-4'>Our Project Management solutions.</div>;
+  return (
+    <div id='project-management' className=''>
+
+      <div className=''>
+        <Hero />
+        <Overview />
+        <Features />
+        <Contactus />
+        <Newsletter />
+      </div>
+    </div>
+  );
 }

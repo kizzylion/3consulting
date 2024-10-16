@@ -20,6 +20,7 @@ function DataProtection() {
         className='overflow-hidden absolute inset-0 z-0 w-full h-screen bg-gray-900'
       >
         <img
+          draggable='false'
           src={map}
           alt='map'
           className='object-cover w-full h-full opacity-40'

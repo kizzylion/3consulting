@@ -15,9 +15,10 @@ export default function WhyUs() {
 						</div>
 					</div>
 					<div className='grid grid-cols-1 gap-10 w-full content-section md:grid-cols-2 lg:grid-cols-3 lg:gap-12'>
-						<div className='flex flex-col items-center text-center value'>
+						<div className='flex flex-col items-center text-center value group'>
 							<FeatureIcon
-								icon={<i className='text-2xl leading-none bi bi-shield'></i>}
+								className='transition-all duration-300 group-hover:text-orange-500 group-hover:border-orange-500 group-hover:shadow-md'
+								icon={<i className='text-2xl leading-none transition-all duration-300 bi bi-shield group-hover:text-orange-500 group-hover:border-orange-500'></i>}
 							/>
 							<div className='mt-5 text-center'>
 								<h4 className='mb-2 text-xl font-semibold text-gray-900'>
@@ -28,10 +29,11 @@ export default function WhyUs() {
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col items-center text-center value'>
+						<div className='flex flex-col items-center text-center value group'>
 							<FeatureIcon
+								className='transition-all duration-300 group-hover:text-orange-500 group-hover:border-orange-500 group-hover:shadow-md'
 								icon={
-									<i className='text-2xl leading-none bi bi-person-check'></i>
+									<i className='text-2xl leading-none transition-all duration-300 bi bi-person-check group-hover:text-orange-500 group-hover:border-orange-500'></i>
 								}
 							/>
 							<div className='mt-5 text-center'>
@@ -43,9 +45,10 @@ export default function WhyUs() {
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col items-center text-center value'>
+						<div className='flex flex-col items-center text-center value group'>
 							<FeatureIcon
-								icon={<i className='text-2xl leading-none bi bi-gear'></i>}
+								className='transition-all duration-300 group-hover:text-orange-500 group-hover:border-orange-500 group-hover:shadow-md'
+								icon={<i className='text-2xl leading-none transition-all duration-300 bi bi-gear group-hover:text-orange-500 group-hover:border-orange-500'></i>}
 							/>
 							<div className='mt-5 text-center'>
 								<h4 className='mb-2 text-xl font-semibold text-gray-900'>

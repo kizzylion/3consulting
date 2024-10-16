@@ -1,7 +1,7 @@
-import featImg1 from '@assets/Audit-amico 1.png';
-import featImg2 from '@assets/Insurance-bro 1.png';
-import featImg3 from '@assets/skills.png';
-import featImg4 from '@assets/consultancy.png';
+import featImg2 from '@assets/outsourced-dpo-service.png';
+import featImg3 from '@assets/ai-ethics&governance.png';
+import { DotLottiePlayer } from '@dotlottie/react-player';
+import '@dotlottie/react-player/dist/index.css';
 
 export default function Features() {
 	return (
@@ -9,52 +9,49 @@ export default function Features() {
 			<section className='px-5 mx-auto max-w-7xl md:px-6 lg:px-20 text-pretty'>
 				<div id='feature-heading' className='mx-auto mb-12 max-w-3xl'>
 					<p className='mb-3 font-semibold text-center text-amber-600'>
-						Key Data Protection Services
+						Key Management Services
 					</p>
 					<h2 className='mb-4 text-3xl font-bold text-center text-gray-800'>
-						Protect Your Business, Secure Your Future
+						Maximize Efficiency and Drive Results with 3Consult's Expert Solutions
 					</h2>
 					<p className='text-lg text-center text-gray-600'>
-						We have already helped over 200+ businesses  to achieve remarkable result
-					</p>
+						We have already helped over 200+ businesses  to achieve remarkable result					</p>
 				</div>
 				<div id='features-list' className='flex flex-col gap-12 lg:gap-24'>
 					<div className='grid grid-cols-1 gap-10 items-center mb-6 feature lg:grid-cols-2 lg:gap-24'>
-						<div className='order-first lg:order-first image-section lg:size-full'>
-							<img
-								src={featImg1}
-								alt=''
-								draggable='false'
+						<div className='order-first lg:order-last image-section lg:size-full'>
+							<DotLottiePlayer
+								src="https://lottie.host/b90fb03d-c8a0-4035-aef9-63957d3a8dae/DixaQuFM7M.json"
+								autoplay
+								loop
 								className='object-cover w-full h-full brightness-90 contrast-125 object-top-center'
 							/>
 						</div>
-						<div className='order-last content-section lg:order-last'>
+						<div className='order-last content-section lg:order-first'>
 							<div className='content-heading'>
 								<h3 className='mb-5 text-2xl font-medium leading-5 text-gray-950'>
-									Data Protection Services
+									Agile Project Management
 								</h3>
 								<p className='leading-6 text-gray-700'>
-									Our experts ensure compliance with global data privacy
-									regulations, protecting your data and strengthening your
-									operations.
+									Our Agile Project Management services allow your organization to stay flexible and responsive to change. By applying Agile methodologies, we ensure your projects are executed smoothly and delivered on time while allowing for adjustments along the way to meet evolving business needs.
 								</p>
 							</div>
 							<div className='pl-2 mb-7 feature-list'>
 								<div className='flex gap-3 mt-7'>
 									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
 									<div className='content'>
-										<h4 className='font-medium'>Data Protection Audit</h4>
+										<h4 className='font-medium'>Rapid Delivery</h4>
 										<p className='text-gray-700'>
-											Our Data Protection Audit service provides a comprehensive review of your organization's data handling processes, identifying potential risks and ensuring alignment with relevant data protection regulations like GDPR, NDPR, and more.
+											Faster project execution with incremental delivery, allowing you to see results sooner
 										</p>
 									</div>
 								</div>
 								<div className='flex gap-3 mt-7'>
 									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
 									<div className='content'>
-										<h4 className='font-medium'>Risk Identification</h4>
+										<h4 className='font-medium'>Adaptability</h4>
 										<p className='text-gray-700'>
-											Uncover vulnerabilities in data storage, transfer, and processing.
+											Our Agile approach allows for changes and improvements throughout the project lifecycle.
 										</p>
 									</div>
 								</div>
@@ -70,60 +67,9 @@ export default function Features() {
 								<div className='flex gap-3 mt-7'>
 									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
 									<div className='content'>
-										<h4 className='font-medium'>Actionable Audit</h4>
+										<h4 className='font-medium'>Collaboration</h4>
 										<p className='text-gray-700'>
-											Receive recommendations to improve data security and minimize risks.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className='grid grid-cols-1 gap-10 items-center mb-6 feature lg:grid-cols-2 lg:gap-24'>
-						<div className='order-first lg:order-last image-section lg:size-full'>
-							<img
-								src={featImg2}
-								alt=''
-								draggable='false'
-								className='object-cover w-full h-full brightness-90 contrast-125 object-top-center'
-							/>
-						</div>
-						<div className='order-last content-section lg:order-first'>
-							<div className='content-heading'>
-								<h3 className='mb-5 text-2xl font-medium leading-5 text-gray-950'>
-									Policy Development
-								</h3>
-								<p className='leading-6 text-gray-700'>
-									Developing robust and compliant data protection policies is critical to securing your business operations. We help you craft policies that meet legal requirements and adapt to evolving regulatory landscapes.
-								</p>
-							</div>
-							<div className='pl-2 mb-7 feature-list'>
-								<div className='flex gap-3 mt-7'>
-									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
-									<div className='content'>
-										<h4 className='font-medium'>Custom Policy Creation:</h4>
-										<p className='text-gray-700'>
-											Tailored policies that fit your business's unique needs.
-										</p>
-									</div>
-								</div>
-								<div className='flex gap-3 mt-7'>
-									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
-									<div className='content'>
-										<h4 className='font-medium'>
-											Regulatory Adherence
-										</h4>
-										<p className='text-gray-700'>
-											Ensure that your policies comply with GDPR, NDPR, and other regulations.
-										</p>
-									</div>
-								</div>
-								<div className='flex gap-3 mt-7'>
-									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
-									<div className='content'>
-										<h4 className='font-medium'>Periodic Reviews</h4>
-										<p className='text-gray-700'>
-											Ongoing policy reviews to keep up with legal updates.
+											We encourage close collaboration between stakeholders and our team to ensure that the project stays aligned with your business goals.
 										</p>
 									</div>
 								</div>
@@ -133,13 +79,64 @@ export default function Features() {
 					<div className='grid grid-cols-1 gap-10 items-center mb-6 feature lg:grid-cols-2 lg:gap-24'>
 						<div className='order-first lg:order-first image-section lg:size-full'>
 							<img
-								src={featImg3}
+								src={featImg2}
 								alt=''
 								draggable='false'
 								className='object-cover w-full h-full brightness-90 contrast-125 object-top-center'
 							/>
 						</div>
 						<div className='order-last content-section lg:order-last'>
+							<div className='content-heading'>
+								<h3 className='mb-5 text-2xl font-medium leading-5 text-gray-950'>
+									Outsourced Data Protection Officer (DPO) Services
+								</h3>
+								<p className='leading-6 text-gray-700'>
+									Data privacy is more important than ever, but hiring a full-time Data Protection Officer (DPO) can be costly and resource-intensive. Our Outsourced DPO Services offer a flexible, cost-effective solution for organizations that need expert oversight of their data protection programs.
+								</p>
+							</div>
+							<div className='pl-2 mb-7 feature-list'>
+								<div className='flex gap-3 mt-7'>
+									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
+									<div className='content'>
+										<h4 className='font-medium'>Certified DPOs:</h4>
+										<p className='text-gray-700'>
+											Our DPOs are internationally certified and equipped to manage your data protection compliance, including GDPR, NDPR, and other privacy regulations.
+										</p>
+									</div>
+								</div>
+								<div className='flex gap-3 mt-7'>
+									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
+									<div className='content'>
+										<h4 className='font-medium'>
+											Continuous Monitoring
+										</h4>
+										<p className='text-gray-700'>
+											We provide ongoing support and audits to ensure that your data protection policies are up-to-date and compliant.
+										</p>
+									</div>
+								</div>
+								<div className='flex gap-3 mt-7'>
+									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
+									<div className='content'>
+										<h4 className='font-medium'>Incident Response & Reporting</h4>
+										<p className='text-gray-700'>
+											In case of a data breach or compliance issue, we handle the response, reporting, and communication with relevant regulatory authorities.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className='grid grid-cols-1 gap-10 items-center mb-6 feature lg:grid-cols-2 lg:gap-24'>
+						<div className='order-first lg:order-last image-section lg:size-full'>
+							<img
+								src={featImg3}
+								alt=''
+								draggable='false'
+								className='object-cover w-full h-full brightness-90 contrast-125 object-top-center'
+							/>
+						</div>
+						<div className='order-last content-section lg:order-first'>
 							<div className='content-heading'>
 								<h3 className='mb-5 text-2xl font-medium leading-5 text-gray-950'>
 									Capacity Building
@@ -185,61 +182,7 @@ export default function Features() {
 							</div>
 						</div>
 					</div>
-					<div className='grid grid-cols-1 gap-10 items-center mb-6 feature lg:grid-cols-2 lg:gap-24'>
-						<div className='order-first lg:order-last image-section lg:size-full'>
-							<img
-								src={featImg4}
-								alt=''
-								draggable='false'
-								className='object-cover w-full h-full brightness-90 contrast-125 object-top-center'
-							/>
-						</div>
-						<div className='order-last content-section lg:order-first'>
-							<div className='content-heading'>
-								<h3 className='mb-5 text-2xl font-medium leading-5 text-gray-950'>
-									Data Consulting Services
-								</h3>
-								<p className='leading-6 text-gray-700'>
-									Our Data Consulting Services cover a wide range of expertise
-									across Nigeria, Rwanda, and Zimbabwe, helping businesses
-									navigate local and international data protection
-									requirements.
-								</p>
-							</div>
-							<div className='pl-2 mb-7 feature-list'>
-								<div className='flex gap-3 mt-7'>
-									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
-									<div className='content'>
-										<h4 className='font-medium'>Nigeria</h4>
-										<p className='text-gray-700'>
-											Licensed as a Data Protection Compliance Organization (DPCO), we offer consulting services that ensure NDPR compliance and adherence to Nigerian data laws.
-										</p>
-									</div>
-								</div>
-								<div className='flex gap-3 mt-7'>
-									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
-									<div className='content'>
-										<h4 className='font-medium'>
-											Rwanda & Zimbabwe
-										</h4>
-										<p className='text-gray-700'>
-											Our certified professionals help organizations stay ahead of privacy regulations and implement best practices for secure data management.
-										</p>
-									</div>
-								</div>
-								<div className='flex gap-3 mt-7'>
-									<i className='text-xl font-bold text-amber-600 bi bi-check-circle'></i>
-									<div className='content'>
-										<h4 className='font-medium'>AI Ethics & Governance</h4>
-										<p className='text-gray-700'>
-											Navigate AI challenges with our ethical AI consultancy and
-											assessments.{' '}
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
 				</div>
 			</section>
 		</div>

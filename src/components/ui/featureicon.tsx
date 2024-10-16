@@ -1,12 +1,14 @@
+import { cn } from '@utils/index';
 import React from 'react';
 
 interface FeatureIconProps {
   icon: React.ReactNode;
+  className?: string;
 }
 
-const FeatureIcon: React.FC<FeatureIconProps> = ({ icon }) => {
+const FeatureIcon: React.FC<FeatureIconProps> = ({ icon, className }) => {
   return (
-    <div className='grid grid-cols-1 grid-row-1 p-3 text-gray-700 w-fit border border-gray-200 rounded-[10px] bg-white shadow-sm'>
+    <div className={cn(`grid grid-cols-1 p-3 text-gray-700 bg-white border border-gray-200 shadow-sm grid-row-1 w-fit rounded-[10px]`, className)}>
       {icon}
     </div>
   );

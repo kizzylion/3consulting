@@ -3,7 +3,7 @@ import Button from "@components/ui/button";
 export default function StartToday() {
 	return (
 		<section className="py-16 w-full bg-gray-900 md:py-24">
-			<div className="px-5 mx-auto max-w-7xl  md:px-8">
+			<div className="px-5 mx-auto max-w-7xl md:px-8">
 				<div className="p-8 md:rounded-2xl md:p-12">
 					<div className="flex flex-col gap-8 justify-between items-center w-full md:flex-row">
 						<div className="text-left">
