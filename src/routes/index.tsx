@@ -1,11 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
-import Hero from '@components/pages/home/Hero';
-import Features from '@components/pages/home/features-section';
-import Carousel from '@components/pages/home/Carousel';
-import Testimonial from '@components/pages/home/testimonial';
-import FactsAndQuestion from '@components/pages/home/frequently-asked-questions';
-import Metrics from '@components/pages/home/metrics';
-import HomeNewsletter from '@components/pages/home/NewsLetter';
+import Hero from '@pages/home/Hero';
+import Features from '@pages/home/features-section';
+import Carousel from '@pages/home/Carousel';
+import Testimonial from '@pages/home/testimonial';
+import FactsAndQuestion from '@pages/home/frequently-asked-questions';
+import Metrics from '@pages/home/metrics';
+import HomeNewsletter from '@pages/home/NewsLetter';
 export const Route = createFileRoute('/')({
   component: Home,
 });
