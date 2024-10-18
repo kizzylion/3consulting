@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
       id="data-protection-hero"
       className={`relative bg-gray-700 isolate   mx-auto bg-cover bg-center  md:py-16 lg:py-24`}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 z-20  justify-between items-center pt-10 w-full px-4 py-12 md:px-8 md:grid md:grid-cols-2 md:pt-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 z-20  justify-between items-center pt-24 w-full px-4 py-12 md:px-8 md:grid md:grid-cols-2 md:pt-16">
         <div className="mb-6 lg:mb-0">
           <div
             id="badge"
