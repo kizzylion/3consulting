@@ -26,8 +26,8 @@ const navItems: NavItem[] = [
     to: '/resources/blog',
     children: [
       { label: 'Blog', to: '/resources/blog' },
-      { label: 'Whitepapers', to: '/resources/whitepapers' },
-      { label: 'Case Studies', to: '/resources/case-studies' },
+      { label: 'CDPO Training', to: '/resources/cdpo-training' },
+      { label: 'Educational Technology Training', to: '/resources/educational-technology-training' },
     ],
   },
 ];
