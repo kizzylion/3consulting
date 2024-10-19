@@ -1,9 +1,16 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute } from "@tanstack/react-router";
+import AboutCDPO from "@pages/resources/cdpo/about";
+import EnrollSection from "@pages/resources/cdpo/enrrolsection";
 
-export const Route = createFileRoute('/resources/cdpo-training')({
+export const Route = createFileRoute("/resources/cdpo-training")({
   component: CDPOTraining,
 });
 
 function CDPOTraining() {
-  return <div className='p-4'>Information about our CDPO Training.</div>;
+  return (
+    <>
+      <AboutCDPO />
+      <EnrollSection />
+    </>
+  );
 }
