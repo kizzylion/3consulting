@@ -1,4 +1,5 @@
 import FeatureIcon from "@components/ui/featureicon";
+import pecbLogo from "@assets/pecb-logo.png";
 
 const EnrollSection: React.FC = () => {
   return (
@@ -80,7 +81,72 @@ const EnrollSection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="training-content"></div>
+          <div className="training-content">
+            <div className="enrol-card flex flex-col bg-white shadow-xl rounded-2xl border border-gray-200">
+              <div className="enrol-card-header">
+                <div className="header-content grid grid-cols-4 justify-between items-center w-full h-fit p-6 pt-8 lg:p-8 lg:pb-6 border-b border-gray-200 ">
+                  <div className="heading-subtext col-span-3 flex flex-col gap-2 w-full h-fit">
+                    <div className="heading-badge flex items-center">
+                      <h3 className="text-xl font-semibold mr-4">
+                        CDPO Training
+                      </h3>
+                      <div className="badge w-fit px-3 py-1 font-medium text-sm md:text-base bg-orange-50 text-orange-600 border border-orange-600 rounded-full">
+                        Open
+                      </div>
+                    </div>
+                    <p className="text-gray-700">
+                      Enrol today and take the next step in your career
+                    </p>
+                  </div>
+                  <div className="image-section flex items-center justify-center w-1/2 ml-auto">
+                    <img
+                      src={pecbLogo}
+                      alt="pecb-logo"
+                      className=" flex w-auto h-full shrink grow-0"
+                    />
+                  </div>
+                </div>
+                <div className="course-highlight w-full h-fit p-6 lg:p-8">
+                  <div className="title-subtitle w-full h-fit mb-6">
+                    <h4 className=" font-semibold">Course Highlights</h4>
+                    <p className="text-gray-700">
+                      Everything you will learn in this course
+                    </p>
+                  </div>
+                  <div className="course-highlights grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    <div className="highlight flex ">
+                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                      <p className="text-gray-700">
+                        Understanding Data Protection Regulations
+                      </p>
+                    </div>
+                    <div className="highlight flex ">
+                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                      <p className="text-gray-700">
+                        Data Security & Risk Management{" "}
+                      </p>
+                    </div>
+                    <div className="highlight flex ">
+                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                      <p className="text-gray-700">
+                        Data subject rights and incident response
+                      </p>
+                    </div>
+                    <div className="highlight flex ">
+                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                      <p className="text-gray-700">
+                        Implementation & Compliance
+                      </p>
+                    </div>
+                    <div className="highlight flex ">
+                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                      <p className="text-gray-700">DPO Responsibilities </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
