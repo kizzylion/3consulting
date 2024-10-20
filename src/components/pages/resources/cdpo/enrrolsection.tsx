@@ -106,44 +106,47 @@ const EnrollSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="course-highlight w-full h-fit p-6 lg:p-8">
-                  <div className="title-subtitle w-full h-fit mb-6">
-                    <h4 className=" font-semibold">Course Highlights</h4>
+              </div>
+              <div className="course-highlight w-full h-fit p-6 lg:p-8">
+                <div className="title-subtitle w-full h-fit mb-6">
+                  <h4 className=" font-semibold">Course Highlights</h4>
+                  <p className="text-gray-700">
+                    Everything you will learn in this course
+                  </p>
+                </div>
+                <div className="course-highlights grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                  <div className="highlight flex ">
+                    <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
                     <p className="text-gray-700">
-                      Everything you will learn in this course
+                      Understanding Data Protection Regulations
                     </p>
                   </div>
-                  <div className="course-highlights grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                    <div className="highlight flex ">
-                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
-                      <p className="text-gray-700">
-                        Understanding Data Protection Regulations
-                      </p>
-                    </div>
-                    <div className="highlight flex ">
-                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
-                      <p className="text-gray-700">
-                        Data Security & Risk Management{" "}
-                      </p>
-                    </div>
-                    <div className="highlight flex ">
-                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
-                      <p className="text-gray-700">
-                        Data subject rights and incident response
-                      </p>
-                    </div>
-                    <div className="highlight flex ">
-                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
-                      <p className="text-gray-700">
-                        Implementation & Compliance
-                      </p>
-                    </div>
-                    <div className="highlight flex ">
-                      <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
-                      <p className="text-gray-700">DPO Responsibilities </p>
-                    </div>
+                  <div className="highlight flex ">
+                    <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                    <p className="text-gray-700">
+                      Data Security & Risk Management{" "}
+                    </p>
+                  </div>
+                  <div className="highlight flex ">
+                    <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                    <p className="text-gray-700">
+                      Data subject rights and incident response
+                    </p>
+                  </div>
+                  <div className="highlight flex ">
+                    <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                    <p className="text-gray-700">Implementation & Compliance</p>
+                  </div>
+                  <div className="highlight flex ">
+                    <i className="bi bi-check-circle text-2xl text-orange-600 mr-3"></i>
+                    <p className="text-gray-700">DPO Responsibilities </p>
                   </div>
                 </div>
+              </div>
+              <div className="enroll-cta flex justify-center w-full p-6 lg:p-8 border-t border-gray-200">
+                <button className="px-6 py-3 w-full font-medium text-gray-900 bg-amber-400 rounded-lg shadow-md cursor-pointer hover:bg-amber-500 focus:ring-2 focus:ring-offset-2 active:bg-amber-600 active:scale-95 focus:ring-amber-500 ">
+                  Enrol Now
+                </button>
               </div>
             </div>
           </div>
