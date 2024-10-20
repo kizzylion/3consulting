@@ -5,7 +5,7 @@ const EnrollSection: React.FC = () => {
   return (
     <section id="Enroll-CDPO" className="pb-12 lg:pb-16">
       <div className="max-w-7xl mx-auto flex w-full h-fit px-5 md:px-6 ">
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 lg:mt-12">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16 lg:mt-12 w-full">
           <div className="text-contents h-fit">
             <h5 className="text-sm font-semibold  text-orange-500 w-fit mb-5">
               Why Become a Certified Data Protection Officer?
