@@ -2,9 +2,9 @@ import Button from "@components/ui/button";
 
 export default function StartToday() {
   return (
-    <section className="py-16 w-full bg-gray-900 md:py-24">
+    <section className="py-16 w-full bg-gray-900">
       <div className="px-5 mx-auto max-w-7xl md:px-8">
-        <div className="p-8 md:rounded-2xl md:p-12">
+        <div className=" md:rounded-2xl ">
           <div className="flex flex-col gap-8 justify-between items-center w-full md:flex-row">
             <div className="text-left">
               <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
