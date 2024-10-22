@@ -41,7 +41,10 @@ const Testimony = () => {
     <section className="py-10 lg:py-20">
       <div className="mx-auto flex max-w-7xl px-5 md:px-6">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="embla__viewport overflow-hidden" ref={emblaRef}>
+          <div
+            className="embla__viewport relative overflow-hidden"
+            ref={emblaRef}
+          >
             <TestifiersCard
               testifiers={testifiers}
               prevButton={
@@ -57,7 +60,7 @@ const Testimony = () => {
                 />
               }
             />
-            <div className="embla__controls mt-5">
+            <div className="embla__controls mt-5 bg-white/10 backdrop-blur-sm md:absolute md:bottom-0 md:right-0 md:w-auto md:rounded-full md:p-2">
               <div className="action flex w-full items-center justify-between lg:w-auto">
                 <PrevButton
                   onClick={onPrevBtnClick}
