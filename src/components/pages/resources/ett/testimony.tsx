@@ -1,5 +1,5 @@
-import testimonyImage from '@assets/groupImages1.png'
-import testifier1 from '@assets/testifier1.png'
+import ettHero from '@assets/ettHero.png'
+
 import testifier2 from '@assets/testifier2.png'
 import TestifiersCard from '../utilities/TestifiersCard'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -12,12 +12,12 @@ import {
 
 const testifiers = [
   {
-    name: '_Mrs. Amina',
-    position: 'Student',
-    image: testifier1,
+    name: 'Dr. Grace Bello',
+    position: 'Administrator, Scholars International College',
+    image: ettHero,
     stars: '✭✭✭✭✭',
     quote:
-      "I've learned so much about data protection regulation and implementation from this course. It's been a game-changer for me.",
+      'The tools they introduced have helped reduce time spent on administrative tasks, allowing teachers to focus more on personalized instruction.',
   },
   {
     name: '_Mr. John',
@@ -29,7 +29,7 @@ const testifiers = [
   },
 ]
 
-const Testimony = () => {
+const EttTestimony = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000 }),
   ])
@@ -72,7 +72,7 @@ const Testimony = () => {
           </div>
           <div className="image-content order-first flex items-center justify-center lg:order-last">
             <img
-              src={testimonyImage}
+              src={ettHero}
               alt="testimony"
               className="mx-auto my-auto"
               draggable={false}
@@ -84,4 +84,4 @@ const Testimony = () => {
   )
 }
 
-export default Testimony
+export default EttTestimony
