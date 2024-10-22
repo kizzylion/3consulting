@@ -1,47 +1,47 @@
-import testimonyImage from "@assets/groupImages1.png";
-import testifier1 from "@assets/testifier1.png";
-import testifier2 from "@assets/testifier2.png";
-import TestifiersCard from "./TestifiersCard";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import testimonyImage from '@assets/groupImages1.png'
+import testifier1 from '@assets/testifier1.png'
+import testifier2 from '@assets/testifier2.png'
+import TestifiersCard from './TestifiersCard'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
+} from './EmblaCarouselArrowButtons'
 
 const testifiers = [
   {
-    name: "_Mrs. Amina",
-    position: "Student",
+    name: '_Mrs. Amina',
+    position: 'Student',
     image: testifier1,
-    stars: "✭✭✭✭✭",
+    stars: '✭✭✭✭✭',
     quote:
       "I've learned so much about data protection regulation and implementation from this course. It's been a game-changer for me.",
   },
   {
-    name: "_Mr. John",
-    position: "Student",
+    name: '_Mr. John',
+    position: 'Student',
     image: testifier2,
-    stars: "✭✭✭✭✭",
+    stars: '✭✭✭✭✭',
     quote:
-      "The course was very informative and practical. It helped me understand the importance of data protection and how to implement it in my organization.",
+      'The course was very informative and practical. It helped me understand the importance of data protection and how to implement it in my organization.',
   },
-];
+]
 
 const Testimony = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000 }),
-  ]);
+  ])
 
   const { prevBtnDisabled, nextBtnDisabled, onPrevBtnClick, onNextBtnClick } =
-    usePrevNextButtons(emblaApi);
+    usePrevNextButtons(emblaApi)
 
   return (
     <section className="py-10 lg:py-20">
-      <div className="max-w-7xl mx-auto px-5 md:px-6 flex ">
-        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="embla__viewport overflow-hidden " ref={emblaRef}>
+      <div className="mx-auto flex max-w-7xl px-5 md:px-6">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="embla__viewport overflow-hidden" ref={emblaRef}>
             <TestifiersCard
               testifiers={testifiers}
               prevButton={
@@ -58,7 +58,7 @@ const Testimony = () => {
               }
             />
             <div className="embla__controls mt-5">
-              <div className="action flex items-center w-full lg:w-auto justify-between">
+              <div className="action flex w-full items-center justify-between lg:w-auto">
                 <PrevButton
                   onClick={onPrevBtnClick}
                   disabled={prevBtnDisabled}
@@ -70,7 +70,7 @@ const Testimony = () => {
               </div>
             </div>
           </div>
-          <div className="image-content flex items-center justify-center order-first lg:order-last">
+          <div className="image-content order-first flex items-center justify-center lg:order-last">
             <img
               src={testimonyImage}
               alt="testimony"
@@ -81,7 +81,7 @@ const Testimony = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Testimony;
+export default Testimony
