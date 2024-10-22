@@ -1,5 +1,4 @@
 import FeatureIcon from '@components/ui/featureicon'
-import pecbLogo from '@assets/pecb-logo.png'
 
 const EnrolETTSection: React.FC = () => {
   return (
