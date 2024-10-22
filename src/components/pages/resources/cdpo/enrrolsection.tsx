@@ -81,7 +81,7 @@ const EnrollSection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="training-content">
+          <div className="training-content flex items-center justify-center">
             <div className="enrol-card flex flex-col bg-white shadow-xl rounded-2xl border border-gray-200">
               <div className="enrol-card-header">
                 <div className="header-content grid grid-cols-4 justify-between items-center w-full h-fit p-6 pt-8 lg:p-8 lg:pb-6 border-b border-gray-200 ">
