@@ -1,5 +1,6 @@
-import type { Config } from 'tailwindcss';
-import headlessui from '@headlessui/tailwindcss';
+import type { Config } from 'tailwindcss'
+import headlessui from '@headlessui/tailwindcss'
+import containerQueries from '@tailwindcss/container-queries'
 
 export default {
   content: [
@@ -28,5 +29,5 @@ export default {
       },
     },
   },
-  plugins: [headlessui],
-} satisfies Config;
+  plugins: [containerQueries, headlessui],
+} satisfies Config

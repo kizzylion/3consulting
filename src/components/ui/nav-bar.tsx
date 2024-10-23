@@ -1,7 +1,8 @@
 import Logo from '@assets/Logo.png';
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Button from './button';
 import { useHoveredElement } from '@hooks/useHoveredElement';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type NavItem = {
   label: string;
@@ -37,16 +38,20 @@ export default function NavBar() {
   const { activeElement, onHover, onLeave, setElementRef } =
     useHoveredElement(500);
 
+  const toggleMenu = useCallback(() => {
+    setIsOpen(prev => !prev);
+  }, []);
+
   return (
     <div
       id='Nav-section'
-      className='max-w-7xl mx-auto w-full px-5 md:px-8 h-fit sticky top-0 z-50'
+      className='sticky top-0 z-50 px-5 mx-auto w-full max-w-7xl md:px-8 h-fit'
     >
       <nav className='py-4 w-full bg-white'>
         <section className='flex justify-between items-center mx-auto'>
-          <div className='flex items-center gap-x-4'>
+          <div className='flex gap-x-4 items-center'>
             <img src={Logo} alt='logo' />
-            <ul className='hidden md:flex space-x-4 ml-20'>
+            <ul className='hidden ml-20 space-x-4 md:flex'>
               {navItems.map((item, index) => (
                 <li
                   key={index}
@@ -57,7 +62,7 @@ export default function NavBar() {
                   <Button
                     to={item.to || '#'}
                     as='link'
-                    className='text-gray-600 focus:underline ring-0 bg-transparent shadow-none'
+                    className='text-gray-600 bg-transparent ring-0 shadow-none focus:underline'
                   >
                     {item.label}
                   </Button>
@@ -74,43 +79,39 @@ export default function NavBar() {
             <Button
               to='/contact'
               as='link'
-              className='text-accent-dark-ui text-sm bg-amber-400 hover:text-amber-600 py-3 cursor-pointer px-4'
+              className='px-4 py-3 text-sm bg-amber-400 cursor-pointer text-accent-dark-ui hover:text-amber-600'
             >
               Contact Us
             </Button>
           </div>
-          <button className='md:hidden' onClick={() => setIsOpen(true)}>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth={1.5}
-              stroke='currentColor'
-              className='size-6'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M3.75 9h16.5m-16.5 6.75h16.5'
-              />
+          <button
+            className="inline-flex z-50 justify-center items-center text-center bg-white rounded-full transition size-10 md:hidden group text-slate-800"
+            aria-pressed={isOpen}
+            onClick={toggleMenu}
+          >
+            <span className="sr-only">Menu</span>
+            <svg className="pointer-events-none fill-current size-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect className="origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-x-0 group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[315deg]" y="7" width="9" height="2" rx="1"></rect>
+              <rect className="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-[[aria-pressed=true]]:rotate-45" y="7" width="16" height="2" rx="1"></rect>
+              <rect className="origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:-rotate-[225deg]" y="7" width="9" height="2" rx="1"></rect>
             </svg>
           </button>
         </section>
       </nav>
-      <SmallNav isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <SmallNav isOpen={isOpen} onClose={toggleMenu} />
     </div>
   );
 }
 
 const Dropdown = ({ items }: { items: NavItem[] }) => {
   return (
-    <div className='absolute top-full left-0 bg-white shadow-md rounded-md py-2 mt-1 whitespace-nowrap w-56'>
+    <div className='absolute left-0 top-full py-2 mt-1 w-72 whitespace-nowrap bg-white rounded-md shadow-md'>
       {items.map((item, index) => (
         <Button
           key={index}
           as='link'
           to={item.to || '#'}
-          className='block px-5 py-2 text-sm text-gray-700 w-full text-left'
+          className='block px-5 py-2 w-full text-sm text-left text-gray-700'
         >
           {item.label}
         </Button>
@@ -126,38 +127,64 @@ const SmallNav = ({
   isOpen: boolean;
   onClose: () => void;
 }) => {
-  if (!isOpen) return null;
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => setShowContent(true), 300);
+      return () => clearTimeout(timer);
+    } else {
+      setShowContent(false);
+    }
+  }, [isOpen]);
 
   return (
-    <div className='fixed inset-0 bg-black/60 z-50 flex flex-col justify-start'>
-      <button
-        className='absolute top-4 right-4 bg-white/80 backdrop-blur-3xl shadow-md p-2 rounded-full'
-        onClick={onClose}
-      >
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          strokeWidth={1.5}
-          stroke='currentColor'
-          className='size-4 text-black'
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className='flex fixed inset-0 z-40 flex-col justify-start'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M6 18 18 6M6 6l12 12'
+          <motion.div
+            className='absolute inset-0 bg-black/60'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={onClose}
           />
-        </svg>
-      </button>
-      <ul className='flex flex-col items-start space-y-4 text-left pt-6 bg-white w-3/4 p-4 rounded-se-lg h-full overflow-y-auto'>
-        <li className='w-full'>
-          <img src={Logo} alt='logo' />
-        </li>
-        {navItems.map((item, index) => (
-          <RecursiveNavItem key={index} item={item} onClose={onClose} />
-        ))}
-      </ul>
-    </div>
+          <motion.div
+            className='overflow-y-auto w-3/4 h-full bg-white'
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+          >
+            <AnimatePresence>
+              {showContent && (
+                <motion.ul
+                  className='flex flex-col items-start p-4 pt-8 space-y-4 text-left rounded-se-lg'
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <li className='mb-4 w-full size-6'>
+                    <img src={Logo} alt='logo' />
+                  </li>
+                  {navItems.map((item, index) => (
+                    <RecursiveNavItem key={index} item={item} onClose={onClose} />
+                  ))}
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
@@ -181,15 +208,17 @@ const RecursiveNavItem = ({
           <Button
             as='button'
             onClick={toggleOpen}
-            className='text-gray-600 hover:text-amber-500 bg-transparent shadow-none flex justify-between items-center w-full p-0 hover:bg-transparent focus:ring-transparent active:bg-transparent active:outline-none'
+            className='flex justify-between items-center p-0 w-full text-gray-600 bg-transparent shadow-none hover:text-amber-500 hover:bg-transparent focus:ring-transparent active:bg-transparent active:outline-none'
           >
             {item.label}
-            <svg
+            <motion.svg
               xmlns='http://www.w3.org/2000/svg'
-              className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+              className='w-4 h-4'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
             >
               <path
                 strokeLinecap='round'
@@ -197,27 +226,35 @@ const RecursiveNavItem = ({
                 strokeWidth={2}
                 d='M19 9l-7 7-7-7'
               />
-            </svg>
+            </motion.svg>
           </Button>
-          {isOpen && (
-            <ul className='mt-2 space-y-2'>
-              {item.children.map((child, index) => (
-                <RecursiveNavItem
-                  key={index}
-                  item={child}
-                  onClose={onClose}
-                  depth={depth + 1}
-                />
-              ))}
-            </ul>
-          )}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.ul
+                className='mt-2 space-y-2'
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {item.children.map((child, index) => (
+                  <RecursiveNavItem
+                    key={index}
+                    item={child}
+                    onClose={onClose}
+                    depth={depth + 1}
+                  />
+                ))}
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </>
       ) : (
         <Button
           as='link'
           to={item.to || '#'}
           onClick={onClose}
-          className='text-gray-600 hover:text-amber-500 bg-transparent shadow-none '
+          className='text-gray-600 bg-transparent shadow-none hover:text-amber-500'
         >
           {item.label}
         </Button>

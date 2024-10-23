@@ -1,15 +1,16 @@
-import { createFileRoute } from '@tanstack/react-router';
-import AboutHeading from '@pages/about/heading';
-import PartnersSection from '@pages/about/partners';
-import MetricSection from '@pages/about/metric';
-import OurStorySection from '@pages/about/ourstory';
-import OurValueSection from '@pages/about/ourvalues';
-import OurTeamSection from '@pages/about/ourteam';
-import AboutNewsletter from '@pages/about/newsletter';
+import { createFileRoute } from '@tanstack/react-router'
+import AboutHeading from '@pages/about/heading'
+import PartnersSection from '@pages/about/partners'
+import MetricSection from '@pages/about/metric'
+import OurStorySection from '@pages/about/ourstory'
+import OurValueSection from '@pages/about/ourvalues'
+import OurTeamSection from '@pages/about/ourteam'
+import AboutNewsletter from '@pages/about/newsletter'
+import Footer from '@components/ui/Footer'
 
 export const Route = createFileRoute('/about-us')({
   component: AboutUs,
-});
+})
 
 function AboutUs() {
   return (
@@ -22,6 +23,7 @@ function AboutUs() {
       <OurValueSection />
       <OurTeamSection />
       <AboutNewsletter />
+      <Footer />
     </>
-  );
+  )
 }
