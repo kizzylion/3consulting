@@ -31,6 +31,10 @@ const navItems: NavItem[] = [
       { label: 'Educational Technology Training', to: '/resources/educational-technology-training' },
     ],
   },
+  {
+    label: 'Contact Us',
+    to: '/contact',
+  },
 ];
 
 export default function NavBar() {
