@@ -105,7 +105,7 @@ export default function NavBar() {
 
 const Dropdown = ({ items }: { items: NavItem[] }) => {
   return (
-    <div className='absolute left-0 top-full py-2 mt-1 w-56 whitespace-nowrap bg-white rounded-md shadow-md'>
+    <div className='absolute left-0 top-full py-2 mt-1 w-72 whitespace-nowrap bg-white rounded-md shadow-md'>
       {items.map((item, index) => (
         <Button
           key={index}
