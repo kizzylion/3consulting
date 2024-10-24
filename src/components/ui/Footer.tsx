@@ -1,6 +1,8 @@
 import logo from '@assets/Logo.png'
 import Button from './button'
 
+
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-50 py-12">

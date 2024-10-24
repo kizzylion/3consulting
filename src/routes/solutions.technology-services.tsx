@@ -3,7 +3,7 @@ import Overview from '@components/pages/solutions/technology-services/overview'
 import BreachAttackAndSimulation from '@components/pages/solutions/technology-services/breach-attack-and simulation'
 import WhyChooseBAS from '@components/pages/solutions/technology-services/why-choose-bas'
 import HrsService from '@components/pages/solutions/technology-services/hrs-service'
-import Newsletter from '@components/pages/solutions/technology-services/newsletter'
+import Newsletter from '@components/ui/NewsLetter'
 import GetInTouch from '@components/pages/solutions/technology-services/Get-in-touch'
 import Footer from '@components/ui/Footer'
 
