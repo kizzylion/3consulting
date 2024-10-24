@@ -1,0 +1,12 @@
+# Allow all user agents to crawl the site
+User-agent: *
+
+# Disallow crawling of specific directories
+Disallow: /private/
+Disallow: /temp/
+
+# Allow crawling of all other content
+Allow: /
+
+# Specify the location of the sitemap
+Sitemap: https://www.3consult.com/sitemap.xml
