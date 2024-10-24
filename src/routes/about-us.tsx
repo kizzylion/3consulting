@@ -5,7 +5,7 @@ import MetricSection from '@pages/about/metric'
 import OurStorySection from '@pages/about/ourstory'
 import OurValueSection from '@pages/about/ourvalues'
 import OurTeamSection from '@pages/about/ourteam'
-import AboutNewsletter from '@pages/about/newsletter'
+import Newsletter from '@components/ui/NewsLetter'
 import Footer from '@components/ui/Footer'
 
 export const Route = createFileRoute('/about-us')({
@@ -22,7 +22,7 @@ function AboutUs() {
       <OurStorySection />
       <OurValueSection />
       <OurTeamSection />
-      <AboutNewsletter />
+      <Newsletter />
       <Footer />
     </>
   )

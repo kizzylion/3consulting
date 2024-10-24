@@ -5,7 +5,7 @@ import Carousel from '@pages/home/Carousel'
 import Testimonial from '@pages/home/testimonial'
 import FactsAndQuestion from '@pages/home/frequently-asked-questions'
 import Metrics from '@pages/home/metrics'
-import HomeNewsletter from '@pages/home/NewsLetter'
+import HomeNewsletter from '@components/ui/NewsLetter'
 import Footer from '@components/ui/Footer'
 
 export const Route = createFileRoute('/')({
