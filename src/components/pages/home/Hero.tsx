@@ -63,6 +63,7 @@ const Hero: React.FC = () => {
             <div className='flex items-center gap-6 overflow-auto'>
               {partners.map((partner) => (
                 <img
+                  key={partner.name}
                   draggable='false'
                   src={partner.image}
                   alt={partner.name}
